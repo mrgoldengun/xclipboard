@@ -1,6 +1,6 @@
 # Examples
 
-This directory contains examples demonstrating how to use the XClipboard module.
+This directory contains examples demonstrating how to use the zclipboard module.
 
 ## Available Examples
 

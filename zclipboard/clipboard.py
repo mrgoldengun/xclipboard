@@ -3,9 +3,9 @@
 import sys
 from typing import List, Optional, Type
 
-from xclipboard.backends.base import ClipboardBackend
-from xclipboard.data_types import ClipboardData, ClipboardFormat
-from xclipboard.exceptions import ClipboardFormatError, ClipboardPlatformError
+from zclipboard.backends.base import ClipboardBackend
+from zclipboard.data_types import ClipboardData, ClipboardFormat
+from zclipboard.exceptions import ClipboardFormatError, ClipboardPlatformError
 
 
 def _get_platform_backend() -> Type[ClipboardBackend]:
@@ -13,13 +13,13 @@ def _get_platform_backend() -> Type[ClipboardBackend]:
     platform = sys.platform
     
     if platform == "win32":
-        from xclipboard.backends.windows import WindowsClipboardBackend
+        from zclipboard.backends.windows import WindowsClipboardBackend
         return WindowsClipboardBackend
     elif platform == "darwin":
-        from xclipboard.backends.macos import MacOSClipboardBackend
+        from zclipboard.backends.macos import MacOSClipboardBackend
         return MacOSClipboardBackend
     elif platform.startswith("linux"):
-        from xclipboard.backends.linux import LinuxClipboardBackend
+        from zclipboard.backends.linux import LinuxClipboardBackend
         return LinuxClipboardBackend
     else:
         raise ClipboardPlatformError(f"Unsupported platform: {platform}")

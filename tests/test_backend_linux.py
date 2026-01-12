@@ -8,14 +8,14 @@ from unittest.mock import MagicMock, patch
 import pytest
 
 from tests.conftest import skip_unless_linux
-from xclipboard.exceptions import ClipboardAccessError, ClipboardTimeoutError
+from zclipboard.exceptions import ClipboardAccessError, ClipboardTimeoutError
 
 
 class TestLinuxBackendImport:
     """Tests for Linux backend import behavior."""
     
     def test_import_succeeds(self):
-        from xclipboard.backends.linux import LinuxClipboardBackend
+        from zclipboard.backends.linux import LinuxClipboardBackend
         assert LinuxClipboardBackend is not None
 
 
@@ -24,7 +24,7 @@ class TestLinuxBackendXclipDetection:
     
     def test_raises_error_when_xclip_not_found(self):
         with patch("shutil.which", return_value=None):
-            from xclipboard.backends.linux import LinuxClipboardBackend
+            from zclipboard.backends.linux import LinuxClipboardBackend
             
             with pytest.raises(ClipboardAccessError) as exc_info:
                 LinuxClipboardBackend()
@@ -33,7 +33,7 @@ class TestLinuxBackendXclipDetection:
     
     def test_initializes_when_xclip_found(self):
         with patch("shutil.which", return_value="/usr/bin/xclip"):
-            from xclipboard.backends.linux import LinuxClipboardBackend
+            from zclipboard.backends.linux import LinuxClipboardBackend
             
             backend = LinuxClipboardBackend()
             assert backend._xclip_path == "/usr/bin/xclip"
@@ -45,7 +45,7 @@ class TestLinuxBackendWithMock:
     @pytest.fixture
     def mock_xclip_backend(self):
         with patch("shutil.which", return_value="/usr/bin/xclip"):
-            from xclipboard.backends.linux import LinuxClipboardBackend
+            from zclipboard.backends.linux import LinuxClipboardBackend
             return LinuxClipboardBackend()
     
     def test_get_text_calls_xclip(self, mock_xclip_backend):
@@ -101,7 +101,7 @@ class TestLinuxBackendWithMock:
             
             formats = mock_xclip_backend.get_available_formats()
             
-            from xclipboard import ClipboardFormat
+            from zclipboard import ClipboardFormat
             assert ClipboardFormat.PLAIN_TEXT in formats
             assert ClipboardFormat.HTML in formats
             assert ClipboardFormat.IMAGE in formats
@@ -127,7 +127,7 @@ class TestLinuxBackendIntegration:
         if not shutil.which("xclip"):
             pytest.skip("xclip not installed")
         
-        from xclipboard.backends.linux import LinuxClipboardBackend
+        from zclipboard.backends.linux import LinuxClipboardBackend
         return LinuxClipboardBackend()
     
     def test_instantiation(self, linux_backend):

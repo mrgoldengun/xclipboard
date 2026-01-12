@@ -1,6 +1,6 @@
 """Example: HTML clipboard operations."""
 
-from xclipboard import Clipboard
+from zclipboard import Clipboard
 
 
 def main():

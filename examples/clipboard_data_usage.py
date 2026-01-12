@@ -1,7 +1,7 @@
 """Example: Using ClipboardData for flexible clipboard operations."""
 
-from xclipboard import Clipboard, ClipboardFormat
-from xclipboard.data_types import ClipboardData
+from zclipboard import Clipboard, ClipboardFormat
+from zclipboard.data_types import ClipboardData
 
 
 def main():

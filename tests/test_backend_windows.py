@@ -13,14 +13,14 @@ class TestWindowsBackendImport:
     
     @skip_unless_windows
     def test_import_on_windows(self):
-        from xclipboard.backends.windows import WindowsClipboardBackend
+        from zclipboard.backends.windows import WindowsClipboardBackend
         assert WindowsClipboardBackend is not None
     
     @pytest.mark.skipif(sys.platform == "win32", reason="Test for non-Windows platforms")
     def test_import_fails_gracefully_on_non_windows(self):
         # On non-Windows, ctypes.windll doesn't exist
         with pytest.raises(AttributeError):
-            from xclipboard.backends.windows import WindowsClipboardBackend
+            from zclipboard.backends.windows import WindowsClipboardBackend
 
 
 class TestWindowsBackendHtmlFormat:
@@ -28,7 +28,7 @@ class TestWindowsBackendHtmlFormat:
     
     @skip_unless_windows
     def test_create_html_format(self):
-        from xclipboard.backends.windows import WindowsClipboardBackend
+        from zclipboard.backends.windows import WindowsClipboardBackend
         
         backend = WindowsClipboardBackend()
         html = "<b>test</b>"
@@ -45,7 +45,7 @@ class TestWindowsBackendHtmlFormat:
     
     @skip_unless_windows
     def test_parse_html_format(self):
-        from xclipboard.backends.windows import WindowsClipboardBackend
+        from zclipboard.backends.windows import WindowsClipboardBackend
         
         backend = WindowsClipboardBackend()
         html_format = "Header<!--StartFragment--><b>test</b><!--EndFragment-->Footer"
@@ -55,7 +55,7 @@ class TestWindowsBackendHtmlFormat:
     
     @skip_unless_windows
     def test_parse_html_format_without_markers(self):
-        from xclipboard.backends.windows import WindowsClipboardBackend
+        from zclipboard.backends.windows import WindowsClipboardBackend
         
         backend = WindowsClipboardBackend()
         html = "<b>test</b>"
@@ -69,13 +69,13 @@ class TestWindowsBackendIntegration:
     """Integration tests for Windows backend (requires Windows)."""
     
     def test_instantiation(self):
-        from xclipboard.backends.windows import WindowsClipboardBackend
+        from zclipboard.backends.windows import WindowsClipboardBackend
         
         backend = WindowsClipboardBackend()
         assert backend is not None
     
     def test_set_and_get_text(self):
-        from xclipboard.backends.windows import WindowsClipboardBackend
+        from zclipboard.backends.windows import WindowsClipboardBackend
         
         backend = WindowsClipboardBackend()
         test_text = "Windows clipboard test"
@@ -86,7 +86,7 @@ class TestWindowsBackendIntegration:
         assert result == test_text
     
     def test_clear_clipboard(self):
-        from xclipboard.backends.windows import WindowsClipboardBackend
+        from zclipboard.backends.windows import WindowsClipboardBackend
         
         backend = WindowsClipboardBackend()
         backend.set_text("test")
@@ -96,7 +96,7 @@ class TestWindowsBackendIntegration:
         assert result is None or result == ""
     
     def test_get_available_formats(self):
-        from xclipboard.backends.windows import WindowsClipboardBackend
+        from zclipboard.backends.windows import WindowsClipboardBackend
         
         backend = WindowsClipboardBackend()
         backend.set_text("test")

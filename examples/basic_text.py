@@ -1,13 +1,13 @@
 """Example: Basic text clipboard operations."""
 
-from xclipboard import Clipboard
+from zclipboard import Clipboard
 
 
 def main():
     clipboard = Clipboard()
     
     # Set plain text
-    clipboard.set_text("Hello, XClipboard!")
+    clipboard.set_text("Hello, zclipboard!")
     print("Text set to clipboard")
     
     # Get plain text

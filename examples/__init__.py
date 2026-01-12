@@ -1,1 +1,1 @@
-"""XClipboard examples package."""
+"""zclipboard examples package."""

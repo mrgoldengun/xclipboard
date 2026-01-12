@@ -1,4 +1,4 @@
-# XClipboard
+# zclipboard
 
 A cross-platform clipboard manipulation module for Python with support for multiple data formats.
 
@@ -13,14 +13,14 @@ A cross-platform clipboard manipulation module for Python with support for multi
 ## Installation
 
 ```bash
-pip install xclipboard
+pip install zclipboard
 ```
 
 ### Platform-Specific Dependencies
 
 **MacOS:**
 ```bash
-pip install xclipboard[macos]
+pip install zclipboard[macos]
 # or
 pip install pyobjc-framework-Cocoa
 ```
@@ -35,7 +35,7 @@ sudo pacman -S xclip        # Arch Linux
 
 **For Image Support (all platforms):**
 ```bash
-pip install xclipboard[image]
+pip install zclipboard[image]
 # or
 pip install Pillow
 ```
@@ -43,7 +43,7 @@ pip install Pillow
 ## Quick Start
 
 ```python
-from xclipboard import Clipboard
+from zclipboard import Clipboard
 
 clipboard = Clipboard()
 
@@ -68,12 +68,12 @@ clipboard.clear()
 ### Plain Text
 
 ```python
-from xclipboard import Clipboard
+from zclipboard import Clipboard
 
 clipboard = Clipboard()
 
 # Set text
-clipboard.set_text("Hello, XClipboard!")
+clipboard.set_text("Hello, zclipboard!")
 
 # Get text
 text = clipboard.get_text()
@@ -82,7 +82,7 @@ text = clipboard.get_text()
 ### HTML Content
 
 ```python
-from xclipboard import Clipboard
+from zclipboard import Clipboard
 
 clipboard = Clipboard()
 
@@ -97,7 +97,7 @@ html_content = clipboard.get_html()
 ### Rich Text Format (RTF)
 
 ```python
-from xclipboard import Clipboard
+from zclipboard import Clipboard
 
 clipboard = Clipboard()
 
@@ -110,7 +110,7 @@ rtf_content = clipboard.get_rtf()
 ### Images
 
 ```python
-from xclipboard import Clipboard
+from zclipboard import Clipboard
 
 clipboard = Clipboard()
 
@@ -128,8 +128,8 @@ if image_data:
 ### Using ClipboardData
 
 ```python
-from xclipboard import Clipboard, ClipboardFormat
-from xclipboard.data_types import ClipboardData
+from zclipboard import Clipboard, ClipboardFormat
+from zclipboard.data_types import ClipboardData
 
 clipboard = Clipboard()
 
@@ -146,7 +146,7 @@ print(retrieved.data)              # Hello!
 ### Check Clipboard State
 
 ```python
-from xclipboard import Clipboard, ClipboardFormat
+from zclipboard import Clipboard, ClipboardFormat
 
 clipboard = Clipboard()
 
@@ -162,8 +162,8 @@ if clipboard.has_format(ClipboardFormat.IMAGE):
 ### Custom Backend
 
 ```python
-from xclipboard import Clipboard
-from xclipboard.backends.base import ClipboardBackend
+from zclipboard import Clipboard
+from zclipboard.backends.base import ClipboardBackend
 
 class MyCustomBackend(ClipboardBackend):
     # Implement abstract methods...

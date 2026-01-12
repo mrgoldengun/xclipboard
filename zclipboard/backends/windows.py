@@ -5,9 +5,9 @@ from ctypes import wintypes
 from io import BytesIO
 from typing import List, Optional
 
-from xclipboard.backends.base import ClipboardBackend
-from xclipboard.data_types import ClipboardFormat
-from xclipboard.exceptions import ClipboardAccessError
+from zclipboard.backends.base import ClipboardBackend
+from zclipboard.data_types import ClipboardFormat
+from zclipboard.exceptions import ClipboardAccessError
 
 # Win32 Constants
 CF_BITMAP = 2

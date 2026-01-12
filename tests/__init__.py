@@ -1,1 +1,1 @@
-"""Tests package for XClipboard."""
+"""Tests package for zclipboard."""

@@ -2,9 +2,9 @@
 
 import pytest
 
-from xclipboard import Clipboard, ClipboardFormat
-from xclipboard.data_types import ClipboardData
-from xclipboard.exceptions import ClipboardFormatError
+from zclipboard import Clipboard, ClipboardFormat
+from zclipboard.data_types import ClipboardData
+from zclipboard.exceptions import ClipboardFormatError
 
 
 class TestClipboardInitialization:

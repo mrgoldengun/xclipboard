@@ -14,7 +14,7 @@ class TestMacOSBackendImport:
     @skip_unless_macos
     def test_import_on_macos_with_pyobjc(self):
         try:
-            from xclipboard.backends.macos import MacOSClipboardBackend
+            from zclipboard.backends.macos import MacOSClipboardBackend
             assert MacOSClipboardBackend is not None
         except Exception as e:
             # PyObjC might not be installed
@@ -32,7 +32,7 @@ class TestMacOSBackendWithMock:
             
             # This should handle the ImportError gracefully
             try:
-                from xclipboard.backends import macos
+                from zclipboard.backends import macos
                 importlib.reload(macos)
             except ImportError:
                 pass
@@ -45,7 +45,7 @@ class TestMacOSBackendIntegration:
     @pytest.fixture
     def macos_backend(self):
         try:
-            from xclipboard.backends.macos import MacOSClipboardBackend
+            from zclipboard.backends.macos import MacOSClipboardBackend
             return MacOSClipboardBackend()
         except Exception:
             pytest.skip("PyObjC not available")

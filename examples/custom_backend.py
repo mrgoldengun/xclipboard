@@ -2,8 +2,8 @@
 
 from typing import List, Optional
 
-from xclipboard import Clipboard, ClipboardFormat
-from xclipboard.backends.base import ClipboardBackend
+from zclipboard import Clipboard, ClipboardFormat
+from zclipboard.backends.base import ClipboardBackend
 
 
 class InMemoryClipboardBackend(ClipboardBackend):

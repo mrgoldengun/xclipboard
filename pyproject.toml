@@ -44,13 +44,13 @@ macos = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/mrgoldengun/xclipboard"
-Repository = "https://github.com/mrgoldengun/xclipboard"
-Documentation = "https://github.com/mrgoldengun/xclipboard#readme"
+Homepage = "https://github.com/mrgoldengun/zclipboard"
+Repository = "https://github.com/mrgoldengun/zclipboard"
+Documentation = "https://github.com/mrgoldengun/zclipboard#readme"
 
 [tool.setuptools.packages.find]
 where = ["."]
-include = ["xclipboard*"]
+include = ["zclipboard*"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
@@ -62,7 +62,7 @@ markers = [
 ]
 
 [tool.coverage.run]
-source = ["xclipboard"]
+source = ["zclipboard"]
 branch = true
 
 [tool.coverage.report]

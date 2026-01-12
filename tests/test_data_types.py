@@ -2,7 +2,7 @@
 
 import pytest
 
-from xclipboard.data_types import ClipboardData, ClipboardFormat
+from zclipboard.data_types import ClipboardData, ClipboardFormat
 
 
 class TestClipboardFormat:

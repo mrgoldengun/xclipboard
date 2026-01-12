@@ -3,7 +3,7 @@
 import time
 from typing import Optional
 
-from xclipboard import Clipboard, ClipboardFormat
+from zclipboard import Clipboard, ClipboardFormat
 
 
 def get_clipboard_signature(clipboard: Clipboard) -> Optional[str]:

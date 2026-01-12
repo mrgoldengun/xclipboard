@@ -2,7 +2,7 @@
 
 import pytest
 
-from xclipboard.exceptions import (
+from zclipboard.exceptions import (
     ClipboardAccessError,
     ClipboardError,
     ClipboardFormatError,

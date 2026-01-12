@@ -3,7 +3,7 @@
 from abc import ABC, abstractmethod
 from typing import List, Optional
 
-from xclipboard.data_types import ClipboardFormat
+from zclipboard.data_types import ClipboardFormat
 
 
 class ClipboardBackend(ABC):

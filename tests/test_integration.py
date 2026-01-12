@@ -8,8 +8,8 @@ import sys
 
 import pytest
 
-from xclipboard import Clipboard, ClipboardFormat
-from xclipboard.data_types import ClipboardData
+from zclipboard import Clipboard, ClipboardFormat
+from zclipboard.data_types import ClipboardData
 
 
 def get_native_clipboard():

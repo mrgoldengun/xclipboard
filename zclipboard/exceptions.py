@@ -1,4 +1,4 @@
-"""Custom exceptions for XClipboard module."""
+"""Custom exceptions for zclipboard module."""
 
 
 class ClipboardError(Exception):

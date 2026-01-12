@@ -2,7 +2,7 @@
 
 from pathlib import Path
 
-from xclipboard import Clipboard, ClipboardFormat
+from zclipboard import Clipboard, ClipboardFormat
 
 
 def main():

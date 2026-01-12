@@ -2,7 +2,7 @@
 
 import pytest
 
-from xclipboard.backends.base import ClipboardBackend
+from zclipboard.backends.base import ClipboardBackend
 
 
 class TestClipboardBackendInterface:

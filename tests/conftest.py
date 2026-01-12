@@ -6,8 +6,8 @@ from unittest.mock import MagicMock
 
 import pytest
 
-from xclipboard import ClipboardFormat
-from xclipboard.backends.base import ClipboardBackend
+from zclipboard import ClipboardFormat
+from zclipboard.backends.base import ClipboardBackend
 
 
 class MockClipboardBackend(ClipboardBackend):
@@ -64,7 +64,7 @@ def mock_backend():
 @pytest.fixture
 def clipboard_with_mock(mock_backend):
     """Provide a Clipboard instance with mock backend."""
-    from xclipboard import Clipboard
+    from zclipboard import Clipboard
     return Clipboard(backend=mock_backend)
 
 
