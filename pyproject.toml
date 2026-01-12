@@ -9,7 +9,7 @@ description = "Cross-platform clipboard manipulation module for Python"
 readme = "README.md"
 license = {text = "MIT"}
 authors = [
-    {name = "XClipboard Contributors"}
+    {name = "Vũ Khánh Duy", email = "khanhduy101@gmail.com"}
 ]
 keywords = ["clipboard", "cross-platform", "windows", "macos", "linux", "copy", "paste"]
 classifiers = [
